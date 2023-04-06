@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80ec1a06-29fc-489e-b9bf-4355ca18a9b9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/bcprov-jdk15on-1.70.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/bcutil-jdk15on-1.70.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-beanutils-1.9.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-collections-3.2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-collections4-4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-digester-2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-logging-1.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ecj-3.21.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/itext-2.1.7.js10.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-annotations-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-core-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-databind-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-dataformat-xml-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jasperreports-6.20.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jcommon-1.0.23.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jfreechart-1.0.19.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/materialfx-11.13.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-java-8.0.30.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/stax2-api-4.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/virtualizedfx-11.2.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/woodstox-core-6.2.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/BusManagementApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Controller/BusesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Controller/BusesUpdateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Controller/CustomerUpdateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Controller/DashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Controller/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Controller/RouteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Controller/RouteUpdateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Controller/TicketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/DataAccess/AdminDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/DataAccess/BusDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/DataAccess/BusManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/DataAccess/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/DataAccess/DisplayInforDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/DataAccess/RouteDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/DataAccess/TicketDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Entity/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Entity/Bus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Entity/BusStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Entity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Entity/DisplayInformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Entity/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Entity/Route.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Entity/SeatType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Entity/Ticket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/FxmlLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/MySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Validation/BusValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Validation/CustomerValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Validation/RouteValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Validation/SignUpValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bus/busmanagement/Validation/TicketValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Buses/Buses-Update.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Buses/Buses-View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/CSS/Dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Customer/Customer-Update.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Customer/Customer-View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Dashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Home-View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Image/Route-PNG-Image-Transparent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Image/buschibi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Image/buschibi1.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Image/busticket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Image/bustran1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Image/bustran2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Login/Login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Report/bus-bill.jrxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Route/Route-Update.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Route/Route-View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/bus/busmanagement/Ticket/Ticket-View.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2LjXIaLq8Td1wa2pgKIscnAIBy8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/BusManagement2",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "java.sql.Driver",
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bus.busmanagement.Entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programing\WorkSpace\BusManagement\src\main\resources\com\bus\busmanagement\Login" />
+      <recent name="D:\Programing\WorkSpace\BusManagement" />
+      <recent name="D:\Programing\WorkSpace\BusManagement\src\main\resources\com\bus\busmanagement" />
+      <recent name="D:\Programing\WorkSpace\BusManagement\src\main\resources\CSS" />
+      <recent name="D:\Programing\WorkSpace\BusManagement\src\main\resources\libraries" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Bus_Management">
+    <configuration name="Bus_Management" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.bus.busmanagement.BusManagementApp" />
+      <module name="Bus_Management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bus.busmanagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySQLConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bus.busmanagement.MySQLConnection" />
+      <module name="BusManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bus.busmanagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Bus_Management" />
+        <item itemvalue="Application.MySQLConnection" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80ec1a06-29fc-489e-b9bf-4355ca18a9b9" name="Changes" comment="" />
+      <created>1676385389271</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676385389271</updated>
+      <workItem from="1676385390423" duration="2062000" />
+      <workItem from="1676425004110" duration="3217000" />
+      <workItem from="1676430633739" duration="1912000" />
+      <workItem from="1676447112987" duration="88000" />
+      <workItem from="1676447214196" duration="2083000" />
+      <workItem from="1676466247115" duration="7431000" />
+      <workItem from="1676513796519" duration="6959000" />
+      <workItem from="1676524880524" duration="382000" />
+      <workItem from="1676529528670" duration="6787000" />
+      <workItem from="1676538539194" duration="732000" />
+      <workItem from="1676544231788" duration="5437000" />
+      <workItem from="1676560341153" duration="2831000" />
+      <workItem from="1676595188914" duration="8378000" />
+      <workItem from="1676614821977" duration="1527000" />
+      <workItem from="1676645421502" duration="4740000" />
+      <workItem from="1676651175457" duration="328000" />
+      <workItem from="1676651617592" duration="748000" />
+      <workItem from="1676688767699" duration="6813000" />
+      <workItem from="1676705732717" duration="4511000" />
+      <workItem from="1676725608387" duration="5985000" />
+      <workItem from="1676731777781" duration="2396000" />
+      <workItem from="1676739161720" duration="1350000" />
+      <workItem from="1676775377767" duration="2767000" />
+      <workItem from="1676801030445" duration="1990000" />
+      <workItem from="1676861851054" duration="6225000" />
+      <workItem from="1676868158911" duration="225000" />
+      <workItem from="1676868396287" duration="7033000" />
+      <workItem from="1676887680508" duration="116000" />
+      <workItem from="1676905295581" duration="3686000" />
+      <workItem from="1676962176749" duration="7668000" />
+      <workItem from="1676970487193" duration="190000" />
+      <workItem from="1676980697511" duration="11628000" />
+      <workItem from="1677032854276" duration="10016000" />
+      <workItem from="1677047572909" duration="11172000" />
+      <workItem from="1677069221100" duration="4236000" />
+      <workItem from="1677075869233" duration="355000" />
+      <workItem from="1677116903348" duration="4310000" />
+      <workItem from="1677124662415" duration="3805000" />
+      <workItem from="1677134648664" duration="1955000" />
+      <workItem from="1677136820234" duration="3162000" />
+      <workItem from="1677140237584" duration="2920000" />
+      <workItem from="1677153944567" duration="8664000" />
+      <workItem from="1677163748839" duration="90000" />
+      <workItem from="1677208416858" duration="2279000" />
+      <workItem from="1677219663316" duration="10769000" />
+      <workItem from="1677241585384" duration="5287000" />
+      <workItem from="1677300015461" duration="1614000" />
+      <workItem from="1677305035647" duration="6257000" />
+      <workItem from="1677328783671" duration="5989000" />
+      <workItem from="1677336939785" duration="826000" />
+      <workItem from="1677337783070" duration="1564000" />
+      <workItem from="1677341226065" duration="441000" />
+      <workItem from="1677376036495" duration="12254000" />
+      <workItem from="1677408525547" duration="1840000" />
+      <workItem from="1677415168501" duration="2784000" />
+      <workItem from="1677567135616" duration="7909000" />
+      <workItem from="1677738984935" duration="1415000" />
+      <workItem from="1677806033872" duration="4845000" />
+      <workItem from="1677984725500" duration="348000" />
+      <workItem from="1677985089918" duration="4994000" />
+      <workItem from="1680756167906" duration="217000" />
+      <workItem from="1680756420259" duration="85000" />
+      <workItem from="1680757102584" duration="207000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

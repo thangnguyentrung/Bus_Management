@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPagination?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../CSS/Dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bus.busmanagement.Controller.CustomerController">
+   <children>
+      <AnchorPane layoutX="9.0" layoutY="8.0" prefHeight="581.0" prefWidth="803.0" stylesheets="@../CSS/Dashboard.css">
+         <styleClass>
+            <String fx:value="white-background" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <TableView fx:id="informationTableView" layoutX="3.0" layoutY="78.0" prefHeight="444.0" prefWidth="797.0" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="78.0">
+              <columns>
+                <TableColumn fx:id="customer_id" prefWidth="86.28570747375488" text="Customer #" />
+                <TableColumn fx:id="ticket_id" prefWidth="55.428558349609375" text="Ticket #" />
+                  <TableColumn fx:id="fullName" prefWidth="111.99995422363281" text="Full Name" />
+                  <TableColumn fx:id="gender" prefWidth="49.14288330078125" text="Gender" />
+                  <TableColumn fx:id="phone" prefWidth="75.0" text="Phone #" />
+                  <TableColumn fx:id="route" prefWidth="97.14288330078125" text="Route" />
+                  <TableColumn fx:id="busName" prefWidth="69.14285278320312" text="Bus Name" />
+                  <TableColumn fx:id="seatNumber" prefWidth="73.14288330078125" text="Seat #" />
+                  <TableColumn fx:id="seatType" prefWidth="63.4285888671875" text="Type" />
+                  <TableColumn fx:id="purchaseTime" prefWidth="121.71435546875" text="Purchase Time" />
+              </columns>
+            </TableView>
+            <MFXPagination layoutX="298.0" layoutY="529.0" prefHeight="32.0" prefWidth="207.0" />
+            <TextField fx:id="searchField" layoutX="27.0" layoutY="23.0" prefHeight="32.0" prefWidth="414.0" promptText="Search" styleClass="textfield-search">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <FontIcon fx:id="btnSearch" iconColor="#aba0a0" iconLiteral="fas-search" iconSize="16" layoutX="35.0" layoutY="45.0" styleClass="btn-search" text="" />
+            <MFXButton layoutX="682.0" layoutY="23.0" onAction="#viewInformation" prefHeight="32.0" prefWidth="82.0" styleClass="btn-view" text="View">
+               <graphic>
+                  <FontIcon iconColor="#f0e8e8" iconLiteral="far-eye" iconSize="20" />
+               </graphic>
+            </MFXButton>
+            <FontIcon fx:id="refreshIcon" iconLiteral="fa-refresh" iconSize="16" layoutX="14.0" layoutY="552.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontIcon>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

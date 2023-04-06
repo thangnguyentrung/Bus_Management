@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bus.busmanagement.Controller.DashboardController">
+   <children>
+      <BorderPane fx:id="mainView" prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <AnchorPane prefHeight="359.0" prefWidth="200.0" styleClass="left-side-bar" stylesheets="@CSS/Dashboard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <FontIcon iconLiteral="fas-bus-alt" iconSize="52" layoutX="74.0" layoutY="81.0" selectionEnd="1" />
+                  <Label layoutX="23.0" layoutY="110.0" text="Hyper Bus System">
+                     <font>
+                        <Font name="Tahoma" size="19.0" />
+                     </font>
+                  </Label>
+                  <Line endX="71.42857360839844" layoutX="100.0" layoutY="165.0" startX="-71.92857360839844" />
+                  <MFXButton fx:id="btnHome" layoutX="16.0" layoutY="198.0" onAction="#directToHomeView" prefHeight="33.0" prefWidth="167.0" stylesheets="@CSS/Dashboard.css" text="Dashboard" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="200.0">
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-laptop-house" iconSize="20" />
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="btnBuses" layoutX="16.0" layoutY="300.0" onAction="#directToBusesView" prefHeight="33.0" prefWidth="167.0" stylesheets="@CSS/Dashboard.css" text=" Buses" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="300.0">
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-bus" iconSize="20" />
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton layoutX="16.0" layoutY="247.0" onAction="#directToRouteView" prefHeight="33.0" prefWidth="167.0" stylesheets="@CSS/Dashboard.css" text="Route" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="250.0">
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-route" iconSize="20" />
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton layoutX="16.0" layoutY="407.0" onAction="#directToCustomerView" prefHeight="33.0" prefWidth="167.0" stylesheets="@CSS/Dashboard.css" text="Customer" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="400.0">
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-users" iconSize="20" selectionEnd="1" />
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton layoutX="16.0" layoutY="354.0" onAction="#directToTicketView" prefHeight="33.0" prefWidth="167.0" stylesheets="@CSS/Dashboard.css" text="Ticket" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="350.0">
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-ticket-alt" iconSize="20" />
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton layoutX="16.0" layoutY="504.0" onAction="#directToLoginView" prefHeight="33.0" prefWidth="167.0" stylesheets="@CSS/Dashboard.css" text="Log-out" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="500.0">
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-sign-out-alt" iconSize="24" />
+                     </graphic>
+                  </MFXButton>
+               </children></AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@CSS/Dashboard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="167.0" prefWidth="798.0" stylesheets="@CSS/Dashboard.css">
+                     <styleClass>
+                        <String fx:value="white-background" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="145.0" prefWidth="248.0" stylesheets="@CSS/Dashboard.css">
+                           <children>
+                              <Label fx:id="availableBuses" layoutX="166.0" layoutY="14.0" prefHeight="28.0" prefWidth="16.0" text="0" textFill="#f9efef">
+                                 <font>
+                                    <Font name="Lucida Bright Demibold Italic" size="22.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon iconColor="#f9efef" iconLiteral="fas-bus" iconSize="44" layoutX="38.0" layoutY="75.0" />
+                              <Label layoutX="68.0" layoutY="100.0" text="Avaiable Bus" textFill="#f9eded">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalBuses" layoutX="198.0" layoutY="14.0" prefHeight="28.0" prefWidth="16.0" text="0" textFill="#f9efef">
+                                 <font>
+                                    <Font name="Lucida Bright Demibold Italic" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="184.0" layoutY="14.0" prefHeight="28.0" prefWidth="16.0" text="/" textFill="#f9efef">
+                                 <font>
+                                    <Font name="Lucida Bright Demibold Italic" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="card1" />
+                              <String fx:value="card" />
+                           </styleClass>
+                        </AnchorPane>
+                        <AnchorPane layoutX="275.0" layoutY="11.0" prefHeight="145.0" prefWidth="248.0" stylesheets="@CSS/Dashboard.css">
+                           <styleClass>
+                              <String fx:value="card2" />
+                              <String fx:value="c" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="55.0" layoutY="100.0" text="Today's Income" textFill="#f9eded">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Label fx:id="todayIncome" layoutX="84.0" layoutY="14.0" prefHeight="28.0" prefWidth="159.0" text="0.0 VNĐ" textFill="#f9efef">
+                                 <font>
+                                    <Font name="Lucida Bright Demibold Italic" size="22.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon iconColor="#f9efef" iconLiteral="far-money-bill-alt" iconSize="50" layoutX="38.0" layoutY="80.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="536.0" layoutY="11.0" prefHeight="145.0" prefWidth="248.0" styleClass="card3" stylesheets="@CSS/Dashboard.css">
+                           <children>
+                              <Label layoutX="67.0" layoutY="100.0" text="Total Income" textFill="#f9eded">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalIncome" layoutX="94.0" layoutY="14.0" prefHeight="28.0" prefWidth="151.0" text="0.0 VNĐ" textFill="#f9efef">
+                                 <font>
+                                    <Font name="Lucida Bright Demibold Italic" size="22.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon iconColor="#f9efef" iconLiteral="fas-money-check-alt" iconSize="44" layoutX="29.0" layoutY="80.0" />
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="14.0" layoutY="196.0" prefHeight="393.0" prefWidth="798.0" stylesheets="@CSS/Dashboard.css">
+                     <styleClass>
+                        <String fx:value="white-background" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <children>
+                        <AreaChart fx:id="incomeChart" layoutX="106.0" layoutY="-21.0" prefHeight="393.14285714285717" prefWidth="798.2857142857143" title="Income chart" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </AreaChart>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </center></BorderPane>
+   </children>
+</StackPane>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="610.0" prefWidth="811.0" styleClass="customerInformationBackground" stylesheets="@../CSS/Dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bus.busmanagement.Controller.CustomerUpdateController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="61.0" prefHeight="205.0" prefWidth="503.0" styleClass="white-background" stylesheets="@../CSS/Dashboard.css">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Customer Information" textFill="#544b46">
+               <font>
+                  <Font name="Comic Sans MS" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="67.0" text="ID">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customerIDTextField" layoutX="69.0" layoutY="64.0" prefHeight="27.0" prefWidth="166.0" styleClass="textfield" />
+            <Label layoutX="12.0" layoutY="114.0" text="Name">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customerNameTextField" layoutX="69.0" layoutY="111.0" prefHeight="27.0" prefWidth="166.0" styleClass="textfield" />
+            <Label layoutX="8.0" layoutY="161.0" text="Gender">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="genderComboBox" layoutX="70.0" layoutY="156.0" prefHeight="27.0" prefWidth="87.0" promptText="Choose" styleClass="myComboBox" />
+            <Label layoutX="273.0" layoutY="67.0" text="Phone">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customerPhoneTextField" layoutX="322.0" layoutY="64.0" prefHeight="27.0" prefWidth="166.0" styleClass="textfield" />
+            <Label layoutX="273.0" layoutY="114.0" text="Email">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customerEmailTextField" layoutX="322.0" layoutY="111.0" prefHeight="27.0" prefWidth="166.0" styleClass="textfield" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="213.0" layoutY="284.0" prefHeight="311.0" prefWidth="583.0" styleClass="white-background" stylesheets="@../CSS/Dashboard.css">
+         <children>
+            <Label layoutX="352.0" layoutY="14.0" text="Ticket Information" textFill="#544b46">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="79.0" text="Customer_ID:">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="customerIDTextField1" layoutX="125.0" layoutY="73.0" prefHeight="27.0" prefWidth="166.0" styleClass="textfield" />
+            <Label layoutX="334.0" layoutY="134.0" text="Bus_name:">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="134.0" text="Seat_number:">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ticketSeatNumber" layoutX="125.0" layoutY="129.0" prefHeight="27.0" prefWidth="166.0" styleClass="textfield" />
+            <Label layoutX="35.0" layoutY="193.0" text="Seat_type:">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="253.0" text="Price:">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ticketPrice" layoutX="125.0" layoutY="247.0" prefHeight="27.0" prefWidth="166.0" styleClass="textfield" />
+            <ComboBox fx:id="ticketSeatType" layoutX="127.0" layoutY="189.0" prefHeight="26.0" prefWidth="96.0" promptText="Choose" styleClass="myComboBox" />
+            <Label layoutX="326.0" layoutY="194.0" text="Purchase_time:">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ticketPurchaseTime" layoutX="352.0" layoutY="247.0" prefHeight="27.0" prefWidth="193.0" styleClass="textfield" />
+            <Label layoutX="326.0" layoutY="78.0" text="Route_name:">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="routeComboBox" layoutX="446.0" layoutY="74.0" prefHeight="26.0" prefWidth="96.0" promptText="Choose" styleClass="myComboBox" />
+            <ComboBox fx:id="busComboBox" layoutX="446.0" layoutY="129.0" prefHeight="26.0" prefWidth="96.0" promptText="Choose" styleClass="myComboBox" />
+            <Label layoutX="35.0" layoutY="24.0" text="Ticket_ID:">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ticketID" layoutX="125.0" layoutY="18.0" prefHeight="27.0" prefWidth="166.0" styleClass="textfield" />
+         </children></AnchorPane>
+      <Label layoutX="300.0" layoutY="14.0" prefHeight="26.0" prefWidth="211.0" text="VIEW INFORMATION" textFill="#0a0808">
+         <font>
+            <Font name=".VnTime Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="163.0" fitWidth="211.0" layoutX="575.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/bustran1.png" />
+         </image>
+      </ImageView>
+      <MFXButton fx:id="btnEdit" layoutX="62.0" layoutY="360.0" prefHeight="42.0" prefWidth="87.0" styleClass="btn-update" text="Edit">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="fa-wrench" iconSize="16" selectionStart="1" text=" " />
+         </graphic>
+      </MFXButton>
+      <MFXButton fx:id="btnDelete" layoutX="63.0" layoutY="487.0" prefHeight="42.0" prefWidth="85.0" styleClass="btn-delete" text="Delete">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="fa-remove" iconSize="16" />
+         </graphic>
+      </MFXButton>
+      <MFXButton fx:id="btnSave" layoutX="63.0" layoutY="422.0" prefHeight="42.0" prefWidth="85.0" styleClass="btn-add" text="Save">
+         <graphic>
+            <FontIcon iconColor="#fdfdfd" iconLiteral="fa-save" iconSize="16" />
+         </graphic>
+      </MFXButton>
+   </children>
+</AnchorPane>

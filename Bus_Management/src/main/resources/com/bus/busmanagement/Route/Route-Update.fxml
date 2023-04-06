@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bus.busmanagement.Controller.RouteUpdateController">
+   <children>
+      <Label layoutX="46.0" layoutY="129.0" prefHeight="17.0" prefWidth="39.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Name" />
+      <TextField fx:id="routeName" layoutX="122.0" layoutY="125.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+      <Label layoutX="219.0" layoutY="14.0" prefHeight="26.0" prefWidth="161.0" text="ROUTE UPDATE" textFill="#2544c4">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="185.0" prefHeight="17.0" prefWidth="46.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Origin" />
+      <TextField fx:id="routeOrigin" layoutX="122.0" layoutY="180.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+      <Label layoutX="14.0" layoutY="245.0" prefHeight="17.0" prefWidth="75.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Destination" />
+      <TextField fx:id="routeDestination" layoutX="122.0" layoutY="240.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+      <Label layoutX="328.0" layoutY="134.0" prefHeight="17.0" prefWidth="90.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Start_date" />
+      <DatePicker fx:id="startDate" layoutX="371.0" layoutY="163.0" prefHeight="32.0" prefWidth="161.0" />
+      <Label layoutX="328.0" layoutY="209.0" prefHeight="17.0" prefWidth="90.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="End_date" />
+      <DatePicker fx:id="endDate" layoutX="371.0" layoutY="238.0" prefHeight="32.0" prefWidth="161.0" />
+      <MFXButton fx:id="btnSave" layoutX="262.0" layoutY="318.0" prefHeight="38.0" prefWidth="75.0" styleClass="btn-update" stylesheets="@../CSS/Dashboard.css" text="Save">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="far-save" iconSize="20" />
+         </graphic></MFXButton>
+      <Label layoutX="66.0" layoutY="79.0" prefHeight="17.0" prefWidth="18.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="ID" />
+      <TextField fx:id="routeID" layoutX="122.0" layoutY="74.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,269 @@
+.top-bar {
+    -fx-background-color: linear-gradient(to right, #bdc3c7, #2c3e50);
+
+}
+.left-side-bar {
+    -fx-background-color: linear-gradient(to top, #2193b0, #6dd5ed);
+}
+.left-side-bar .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-alignment: center-left;
+}
+.left-side-bar .button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+.white-background {
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+}
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
+}
+
+.card1{
+    -fx-background-color: linear-gradient(to right, #6b2f39, #a34747);
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+.card2{
+    -fx-background-color: linear-gradient(to right, #2c3e50, #4ca1af);
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+.card3{
+    -fx-background-color: linear-gradient(to left, #bdc3c7, #2c3e50);
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+.card-infor{
+    -fx-background-color: linear-gradient(to right, #355C7D, #6C5B7B, #C06C84);
+    -fx-background-radius: 8px;
+}
+/*BUTTON CSS*/
+
+.btn-add{
+    -fx-background-color: #006E7F;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+.btn-add:hover{
+    -fx-background-color: #014950;
+}
+.btn-update{
+    -fx-background-color: #46B3E6;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+.btn-update:hover{
+    -fx-background-color: #255873;
+}
+.btn-delete{
+    -fx-background-color: #EF6C57;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+.btn-delete:hover{
+    -fx-background-color: #7c3a2d;
+}
+.btn-reset{
+    -fx-background-color: #567189;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+.btn-reset:hover{
+    -fx-background-color: #3b5e75;
+}
+.btn-submit{
+    -fx-background-color: #138191;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+.btn-submit:hover{
+    -fx-background-color: #014950;
+}
+.btn-book{
+    -fx-background-color: #138191;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+.btn-book:hover{
+    -fx-background-color: #014950;
+}
+.btn-receipt{
+    -fx-background-color: #138191;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+.btn-receipt:hover{
+    -fx-background-color: #014950;
+}
+.btn-view{
+    -fx-background-color: #138191;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-alignment: center;
+}
+.btn-view:hover{
+    -fx-background-color: #014950;
+}
+.btn-search{
+    -fx-cursor: hand;
+}
+/*PROPERTY CSS*/
+.textfield{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-prompt-text-fill: #999;
+}
+.textfield:focused{
+    -fx-border-color: #006E7F;
+}
+.myLabel{
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+.textfield-search{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-prompt-text-fill: #999;
+}
+.myComboBox{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #333;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-prompt-text-fill: #999;
+    -fx-font-style: italic;
+}
+.myComboBox:focused{
+    -fx-border-color: #006E7F;
+}
+.ticketInformation{
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-border-width: 0 0 1 0; /* apply border only to the bottom */
+    -fx-border-color: #CCCCCC;
+}
+.textfield-search{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-prompt-text-fill: #999;
+    -fx-padding: 0 0 0 24px;
+}
+.table-view{
+    -fx-border-color: #635985;
+    -fx-background-color: #ECF9FF;
+    -fx-padding: 0px;
+    -fx-border-radius: 5px;
+    -fx-border-with: 2px;
+}
+.table-view .table-row-cell:filled:focused:selected {
+    -fx-background-color: #635985;
+}
+.customerInformationBackground{
+    -fx-background-color: linear-gradient(to top, #2193b0, #6dd5ed);
+}
+
+/* login css  */
+
+.btn-login:hover{
+    -fx-background-color: #1894c9;
+    -fx-cursor: hand;
+}
+
+
+/*PROPERTY CSS*/
+.textfield{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-prompt-text-fill: #999;
+}
+
+/* input text form login css  */
+
+.inputfield{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-prompt-text-fill: #999;
+}
+
+.inputfield:hover{
+    -fx-border-color: #1894c9;
+}
+
+.inputfield:focused{
+    -fx-border-color: #1894c9;
+}
+
+.hypertext-design{
+    -fx-underline: false;
+    -fx-border-color: transparent;
+}
+
+/* create account form login  */
+
+.hypertext-design:hover{
+    -fx-underline: true;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bus.busmanagement.Controller.BusesUpdateController">
+   <children>
+      <Label layoutX="48.0" layoutY="129.0" prefHeight="17.0" prefWidth="39.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Name" />
+      <TextField fx:id="busName" layoutX="122.0" layoutY="125.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+      <Label layoutX="232.0" layoutY="21.0" prefHeight="26.0" prefWidth="135.0" text="BUS UPDATE" textFill="#2544c4">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="5.0" layoutY="185.0" prefHeight="17.0" prefWidth="86.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="License plate" />
+      <TextField fx:id="licensePlate" layoutX="122.0" layoutY="180.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+      <Label layoutX="29.0" layoutY="245.0" prefHeight="17.0" prefWidth="55.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Capacity" />
+      <TextField fx:id="capacity" layoutX="122.0" layoutY="240.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+      <MFXButton fx:id="btnSave" layoutX="262.0" layoutY="318.0" prefHeight="38.0" prefWidth="75.0" styleClass="btn-update" stylesheets="@../CSS/Dashboard.css" text="Save">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="far-save" iconSize="20" />
+         </graphic>
+      </MFXButton>
+      <Label layoutX="67.0" layoutY="79.0" prefHeight="17.0" prefWidth="18.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="ID" />
+      <TextField fx:id="busID" layoutX="122.0" layoutY="74.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+      <Label layoutX="324.0" layoutY="79.0" prefHeight="17.0" prefWidth="65.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="VIP_seat" />
+      <TextField fx:id="VIPSeats" layoutX="412.0" layoutY="74.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+      <Label layoutX="347.0" layoutY="130.0" prefHeight="17.0" prefWidth="33.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Price" />
+      <TextField fx:id="price" layoutX="412.0" layoutY="125.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+      <Label layoutX="341.0" layoutY="185.0" prefHeight="17.0" prefWidth="39.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Route" />
+      <ComboBox fx:id="routeComboBox" layoutX="413.0" layoutY="186.0" prefHeight="32.0" prefWidth="149.0" promptText="Choose" styleClass="myComboBox" stylesheets="@../CSS/Dashboard.css" />
+   </children>
+</AnchorPane>

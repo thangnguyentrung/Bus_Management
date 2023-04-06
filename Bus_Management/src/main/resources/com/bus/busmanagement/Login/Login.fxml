@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bus.busmanagement.Controller.LoginController">
+   <children>
+      <AnchorPane fx:id="signInForm" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="400.0" prefHeight="500.0" prefWidth="400.0" styleClass="hypertext-design" stylesheets="@../CSS/Dashboard.css" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="133.0" layoutY="121.0" text="Sign In">
+                     <font>
+                        <Font name="Book Antiqua" size="40.0" />
+                     </font>
+                  </Label>
+                  <FontIcon iconColor="#1894c9c2" iconLiteral="fa-users" iconSize="80" layoutX="155.0" layoutY="100.0" text="" wrappingWidth="44.85714340209961" />
+                  <TextField fx:id="signInUsername" layoutX="87.0" layoutY="204.0" prefHeight="46.0" prefWidth="219.0" promptText="Username" styleClass="inputfield" stylesheets="@../CSS/Dashboard.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnLogin" layoutX="135.0" layoutY="373.0" mnemonicParsing="false" onAction="#loginToDashBoard" prefHeight="46.0" prefWidth="122.0" styleClass="btn-login" stylesheets="@../CSS/Dashboard.css" text="Login">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="create_acc" layoutX="120.0" layoutY="447.0" onAction="#changeForm" styleClass="hypertext-design" stylesheets="@../CSS/Dashboard.css" text="Create new Account?">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="15.0" />
+                     </font>
+                  </Hyperlink>
+                  <PasswordField fx:id="signInPassword" layoutX="87.0" layoutY="277.0" prefHeight="46.0" prefWidth="219.0" promptText="Password" styleClass="inputfield" stylesheets="@../CSS/Dashboard.css" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signUpForm" layoutX="1.0" layoutY="1.0" prefHeight="500.0" prefWidth="400.0" styleClass="hypertext-design" stylesheets="@../CSS/Dashboard.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FontIcon iconColor="#1894c9c2" iconLiteral="fa-users" iconSize="80" layoutX="155.0" layoutY="100.0" text="" wrappingWidth="44.85714340209961" />
+            <TextField fx:id="signUpUsername" layoutX="87.0" layoutY="191.0" prefHeight="46.0" prefWidth="219.0" promptText="Username" styleClass="inputfield" stylesheets="@../CSS/Dashboard.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnRegister" layoutX="136.0" layoutY="374.0" mnemonicParsing="false" onAction="#register" prefHeight="46.0" prefWidth="122.0" styleClass="btn-login" stylesheets="@../CSS/Dashboard.css" text="Register">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Hyperlink fx:id="login" layoutX="127.0" layoutY="448.0" onAction="#changeForm" styleClass="hypertext-design" stylesheets="@../CSS/Dashboard.css" text="Login your Account?">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="15.0" />
+               </font>
+            </Hyperlink>
+            <Label layoutX="128.0" layoutY="119.0" text="Sign Up">
+               <font>
+                  <Font name="Book Antiqua" size="40.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="signUpPassword" layoutX="87.0" layoutY="250.0" prefHeight="46.0" prefWidth="219.0" promptText="Password" styleClass="inputfield" stylesheets="@../CSS/Dashboard.css" />
+            <PasswordField fx:id="signUpConfirmPassword" layoutX="87.0" layoutY="310.0" prefHeight="46.0" prefWidth="219.0" promptText="Confirm_password" styleClass="inputfield" stylesheets="@../CSS/Dashboard.css" />
+            <FontIcon fx:id="showPassword" iconColor="#887d7d" iconLiteral="fa-eye-slash" iconSize="20" layoutX="314.0" layoutY="279.0" />
+            <FontIcon fx:id="hidePassword" iconColor="#887d7d" iconLiteral="fa-eye" iconSize="20" layoutX="314.0" layoutY="278.0" />
+            <Label fx:id="passwordLabel" layoutX="96.0" layoutY="295.0" prefHeight="17.0" prefWidth="93.0" text="Show password" textFill="#020202" />
+            <Label fx:id="confirmPasswordLabel" layoutX="96.0" layoutY="356.0" prefHeight="17.0" prefWidth="133.0" text="Show confirm password" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="logoApp" layoutX="264.0" prefHeight="500.0" prefWidth="400.0" styleClass="left-side-bar" stylesheets="@../CSS/Dashboard.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="52.0" layoutY="14.0" text="B" textFill="#d3e3d5">
+               <font>
+                  <Font name="Poor Richard" size="400.0" />
+               </font>
+            </Label>
+            <Label layoutX="185.0" layoutY="211.0">
+               <font>
+                  <Font size="100.0" />
+               </font>
+            </Label>
+            <FontIcon iconColor="#211f1f" iconLiteral="fas-bus-alt" iconSize="80" layoutX="134.0" layoutY="343.0" selectionEnd="1" text="" wrappingWidth="85.14285714285711" />
+            <Label layoutX="219.0" layoutY="255.0" text="U" textFill="#825a5a">
+               <font>
+                  <Font name="Goudy Old Style" size="120.0" />
+               </font>
+            </Label>
+            <Label layoutX="312.0" layoutY="253.0" text="S" textFill="#825a5a">
+               <font>
+                  <Font name="Goudy Old Style" size="120.0" />
+               </font>
+            </Label>
+            <FontIcon iconColor="#211f1f" iconLiteral="fab-earlybirds" iconSize="80" layoutX="287.0" layoutY="196.0" />
+            <Label layoutX="254.0" layoutY="181.0" text="Hyper" textFill="#211f1f" textOverrun="CLIP" underline="true">
+               <font>
+                  <Font name="VNI-Viettay Normal" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

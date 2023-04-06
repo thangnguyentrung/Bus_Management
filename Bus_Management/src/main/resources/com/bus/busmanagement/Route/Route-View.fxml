@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPagination?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="200.0" prefWidth="201.0" stylesheets="@../CSS/Dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bus.busmanagement.Controller.RouteController">
+   <children>
+      <AnchorPane layoutX="6.0" layoutY="7.0" prefHeight="574.0" prefWidth="584.0" stylesheets="@../CSS/Dashboard.css">
+         <styleClass>
+            <String fx:value="white-background" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <TableView fx:id="routeTable" layoutX="7.0" layoutY="79.0" prefHeight="443.0" prefWidth="570.0" stylesheets="@../CSS/Dashboard.css">
+               <columns>
+                  <TableColumn fx:id="routeIDColumn" prefWidth="53.71429443359375" text="ID" />
+                  <TableColumn fx:id="routeNameColumn" prefWidth="100.0" text="Name" />
+                  <TableColumn fx:id="routeOriginColumn" prefWidth="82.85714721679688" text="Origin" />
+                  <TableColumn fx:id="routeDestinationColumn" prefWidth="98.28570556640625" text="Destination" />
+                  <TableColumn fx:id="startDateColumn" prefWidth="98.28570556640625" text="Start_date" />
+                  <TableColumn fx:id="endDateColumn" prefWidth="135.42856706891746" text="End_date" />
+               </columns>
+            </TableView>
+            <TextField fx:id="searchTextField" layoutX="22.0" layoutY="26.0" prefHeight="27.0" prefWidth="326.0" promptText="Search" styleClass="textfield-search">
+               <padding>
+                  <Insets left="26.0" />
+               </padding>
+            </TextField>
+            <FontIcon layoutX="110.0" layoutY="32.0" />
+            <FontIcon fx:id="btnSearch" iconColor="#928888" iconLiteral="fas-search" iconSize="14" layoutX="30.0" layoutY="45.0" styleClass="btn-search" text="" wrappingWidth="18.0" />
+            <MFXPagination fx:id="pagination" layoutX="205.0" layoutY="535.0" prefHeight="32.0" prefWidth="174.0" />
+            <Button alignment="CENTER" layoutX="11.0" layoutY="535.0" mnemonicParsing="false" onAction="#refreshTable" prefHeight="25.0" prefWidth="26.0" style="-fx-background-color: none; -fx-cursor: hand;" text=" " textFill="#f3f3f3">
+               <graphic>
+                  <FontIcon iconLiteral="fa-refresh" iconSize="16" />
+               </graphic>
+            </Button>
+            <ImageView fitHeight="64.0" fitWidth="74.0" layoutX="506.0" layoutY="8.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Route-PNG-Image-Transparent.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="600.0" layoutY="7.0" prefHeight="574.0" prefWidth="219.0" stylesheets="@../CSS/Dashboard.css">
+         <styleClass>
+            <String fx:value="white-background" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <Label layoutX="8.0" layoutY="14.0" prefHeight="17.0" prefWidth="39.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Name" />
+            <Label layoutX="9.0" layoutY="76.0" prefHeight="17.0" prefWidth="90.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Origin" />
+            <Label layoutX="7.0" layoutY="139.0" prefHeight="17.0" prefWidth="74.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Destination" />
+            <TextField fx:id="routeName" layoutX="31.0" layoutY="42.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+            <Label layoutX="9.0" layoutY="223.0" />
+            <MFXButton layoutX="61.0" layoutY="461.99999999999994" onAction="#updateRoute" prefHeight="37.0" prefWidth="90.0" styleClass="btn-update" stylesheets="@../CSS/Dashboard.css" text="Update" AnchorPane.bottomAnchor="75.14285714285722">
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="far-edit" iconSize="20" />
+               </graphic>
+            </MFXButton>
+            <MFXButton fx:id="btnAddRoute" layoutX="61.0" layoutY="405.0" onAction="#addRoute" prefHeight="37.0" prefWidth="90.0" styleClass="btn-add" stylesheets="@../CSS/Dashboard.css" text="Add">
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-plus" iconSize="20" />
+               </graphic>
+            </MFXButton>
+            <MFXButton layoutX="61.0" layoutY="519.0" onAction="#deleteRoute" prefHeight="37.0" prefWidth="90.0" styleClass="btn-delete" stylesheets="@../CSS/Dashboard.css" text="Delete" AnchorPane.bottomAnchor="18.142857142857224">
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-minus" iconSize="20" />
+               </graphic>
+            </MFXButton>
+            <MFXButton layoutX="61.0" layoutY="349.99999999999994" onAction="#clearField" prefHeight="37.0" prefWidth="90.0" styleClass="btn-reset" stylesheets="@../CSS/Dashboard.css" text="Clear" AnchorPane.bottomAnchor="187.14285714285722">
+               <graphic>
+                  <FontIcon fx:id="btnClear" iconColor="WHITE" iconLiteral="far-sticky-note" iconSize="20" />
+               </graphic>
+            </MFXButton>
+            <Label layoutX="7.0" layoutY="201.0" prefHeight="17.0" prefWidth="90.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="Start_date" />
+            <TextField fx:id="routeOrigin" layoutX="34.0" layoutY="103.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+            <TextField fx:id="routeDestination" layoutX="34.0" layoutY="166.0" prefHeight="25.0" prefWidth="151.0" styleClass="textfield" stylesheets="@../CSS/Dashboard.css" />
+            <Line endX="84.71429443359375" endY="20.428558349609375" layoutX="112.0" layoutY="317.0" startX="-87.857177734375" startY="20.428558349609375" stroke="#c9b9b9" />
+            <Label layoutX="8.0" layoutY="269.0" prefHeight="17.0" prefWidth="90.0" styleClass="myLabel" stylesheets="@../CSS/Dashboard.css" text="End_date" />
+            <DatePicker fx:id="startDate" layoutX="32.0" layoutY="228.0" prefHeight="32.0" prefWidth="151.0" promptText="MM-DD-YYYY" />
+            <DatePicker fx:id="endDate" layoutX="32.0" layoutY="290.0" prefHeight="32.0" prefWidth="151.0" promptText="MM-DD-YYYY" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

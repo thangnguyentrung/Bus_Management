@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPagination?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="200.0" prefWidth="201.0" stylesheets="@../CSS/Dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bus.busmanagement.Controller.BusesController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="4.0" prefHeight="577.0" prefWidth="221.0" stylesheets="@../CSS/Dashboard.css">
+         <styleClass>
+            <String fx:value="white-background" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <Label layoutX="12.0" layoutY="14.0" styleClass="myLabel" text="Bus name" />
+            <Label layoutX="12.0" layoutY="75.0" styleClass="myLabel" text="License plate" />
+            <Label layoutX="11.0" layoutY="139.0" prefHeight="17.0" prefWidth="63.0" styleClass="myLabel" text="Capacity" />
+            <TextField fx:id="busName" layoutX="34.0" layoutY="42.0" prefHeight="27.0" prefWidth="149.0" styleClass="textfield" />
+            <Label layoutX="9.0" layoutY="223.0" />
+            <MFXButton layoutX="117.0" layoutY="431.0" onAction="#updateBus" prefHeight="37.0" prefWidth="90.0" styleClass="btn-update" stylesheets="@../CSS/Dashboard.css" text="Update">
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="far-edit" iconSize="20" />
+               </graphic>
+            </MFXButton>
+            <MFXButton layoutX="22.0" layoutY="431.0" onAction="#addBus" prefHeight="37.0" prefWidth="83.0" styleClass="btn-add" stylesheets="@../CSS/Dashboard.css" text="Add">
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-plus" iconSize="20" />
+               </graphic>
+            </MFXButton>
+            <MFXButton layoutX="22.0" layoutY="495.0" onAction="#deleteBus" prefHeight="37.0" prefWidth="83.0" styleClass="btn-delete" stylesheets="@../CSS/Dashboard.css" text="Delete">
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-minus" iconSize="20" />
+               </graphic>
+            </MFXButton>
+            <MFXButton layoutX="120.0" layoutY="495.0" onAction="#resetFields" prefHeight="37.0" prefWidth="83.0" styleClass="btn-reset" stylesheets="@../CSS/Dashboard.css" text="Reset">
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="far-sticky-note" iconSize="20" />
+               </graphic>
+            </MFXButton>
+            <Label layoutX="14.0" layoutY="201.0" prefHeight="17.0" prefWidth="104.0" styleClass="myLabel" text="VIP_seat_total" />
+            <Label layoutX="11.0" layoutY="327.0" prefHeight="17.0" prefWidth="83.0" styleClass="myLabel" text="Route" />
+            <ComboBox fx:id="routeComboBox" layoutX="32.0" layoutY="357.0" prefHeight="32.0" prefWidth="149.0" promptText="Choose" styleClass="myComboBox" />
+            <Line endX="78.71426391601562" layoutX="115.0" layoutY="403.0" startX="-100.0" stroke="#e2d9d9" />
+            <TextField fx:id="licensePlate" layoutX="35.0" layoutY="103.0" prefHeight="27.0" prefWidth="149.0" styleClass="textfield" />
+            <TextField fx:id="capacity" layoutX="35.0" layoutY="165.0" prefHeight="27.0" prefWidth="149.0" styleClass="textfield" />
+            <TextField fx:id="VIPSeats" layoutX="34.0" layoutY="226.0" prefHeight="27.0" prefWidth="149.0" styleClass="textfield" />
+            <Label layoutX="12.0" layoutY="263.0" prefHeight="17.0" prefWidth="104.0" styleClass="myLabel" text="Price" />
+            <TextField fx:id="price" layoutX="33.0" layoutY="289.0" prefHeight="27.0" prefWidth="149.0" styleClass="textfield" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="239.0" layoutY="4.0" prefHeight="577.0" prefWidth="582.0" stylesheets="@../CSS/Dashboard.css">
+         <styleClass>
+            <String fx:value="white-background" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <TableView fx:id="busTableView" layoutX="4.0" layoutY="74.0" prefHeight="455.0" prefWidth="570.0" styleClass="styleTableView" stylesheets="@../CSS/Dashboard.css" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="74.0">
+              <columns>
+                <TableColumn fx:id="busIDColumn" prefWidth="38.85711669921875" text="ID" />
+                <TableColumn fx:id="busNameColumn" prefWidth="86.2857666015625" text="Name" />
+                  <TableColumn fx:id="busLicensePlateColumn" prefWidth="81.14288330078125" text="License_plate" />
+                  <TableColumn fx:id="busCapacityColumn" prefWidth="55.4285888671875" text="Capacity" />
+                  <TableColumn fx:id="busVIPSeatsColumn" prefWidth="54.857086181640625" text="VIP_seat" />
+                  <TableColumn fx:id="busPriceColumn" prefWidth="76.5714111328125" text="Price" />
+                  <TableColumn fx:id="busRouteColumn" prefWidth="81.71435546875" text="Route" />
+                  <TableColumn fx:id="busStatusColumn" prefWidth="86.857177734375" text="Status" />
+              </columns>
+            </TableView>
+            <TextField fx:id="searchField" layoutX="14.0" layoutY="19.0" prefHeight="32.0" prefWidth="315.0" promptText="Search" styleClass="textfield-search">
+               <padding>
+                  <Insets left="26.0" />
+               </padding></TextField>
+            <FontIcon layoutX="110.0" layoutY="32.0" />
+            <FontIcon fx:id="btnSearch" iconColor="#a9a4a4" iconLiteral="fas-search" iconSize="16" layoutX="20.0" layoutY="41.0" styleClass="btn-search" text="" wrappingWidth="18.0" />
+            <MFXPagination fx:id="pagination" layoutX="213.0" layoutY="537.0" prefHeight="32.0" prefWidth="149.0" />
+            <FontIcon fx:id="refreshIcon" iconLiteral="fa-refresh" iconSize="16" layoutX="14.0" layoutY="558.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontIcon>
+            <ImageView fitHeight="66.0" fitWidth="104.0" layoutX="452.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/bustran2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

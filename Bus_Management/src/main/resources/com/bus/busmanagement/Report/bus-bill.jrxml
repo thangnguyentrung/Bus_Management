@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bus-bill" pageWidth="420" pageHeight="595" columnWidth="380" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="da0dec2e-eabb-4e8d-a0b9-25e31d59c8e0">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Bus_Management"/>
+    <property name="com.jaspersoft.studio.unit." value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+    <parameter name="ticket_id" class="java.lang.Integer">
+        <defaultValueExpression><![CDATA[new Integer(1)]]></defaultValueExpression>
+    </parameter>
+    <queryString language="SQL">
+        <![CDATA[SELECT ticket.id as ticket_id, bus.license_plate,route.start_date,ticket.price,
+customer.name, customer.gender, customer.phone, route.name as route_name,
+bus.name as bus_name, ticket.seat_number, ticket.seat_type, ticket.purchase_time
+FROM ticket
+INNER JOIN bus ON ticket.bus_id = bus.id
+INNER JOIN customer ON ticket.customer_id = customer.id
+INNER JOIN route ON bus.route_id = route.id
+WHERE ticket.id = $P{ticket_id}]]>
+    </queryString>
+    <field name="ticket_id" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="id"/>
+        <property name="com.jaspersoft.studio.field.label" value="ticket_id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="ticket"/>
+    </field>
+    <field name="license_plate" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="license_plate"/>
+        <property name="com.jaspersoft.studio.field.label" value="license_plate"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="bus"/>
+    </field>
+    <field name="start_date" class="java.sql.Date">
+        <property name="com.jaspersoft.studio.field.name" value="start_date"/>
+        <property name="com.jaspersoft.studio.field.label" value="start_date"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="route"/>
+    </field>
+    <field name="price" class="java.lang.Float">
+        <property name="com.jaspersoft.studio.field.name" value="price"/>
+        <property name="com.jaspersoft.studio.field.label" value="price"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="ticket"/>
+    </field>
+    <field name="name" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="name"/>
+        <property name="com.jaspersoft.studio.field.label" value="name"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+    </field>
+    <field name="gender" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="gender"/>
+        <property name="com.jaspersoft.studio.field.label" value="gender"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+    </field>
+    <field name="phone" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="phone"/>
+        <property name="com.jaspersoft.studio.field.label" value="phone"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+    </field>
+    <field name="route_name" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="name"/>
+        <property name="com.jaspersoft.studio.field.label" value="route_name"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="route"/>
+    </field>
+    <field name="bus_name" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="name"/>
+        <property name="com.jaspersoft.studio.field.label" value="bus_name"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="bus"/>
+    </field>
+    <field name="seat_number" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="seat_number"/>
+        <property name="com.jaspersoft.studio.field.label" value="seat_number"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="ticket"/>
+    </field>
+    <field name="seat_type" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="seat_type"/>
+        <property name="com.jaspersoft.studio.field.label" value="seat_type"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="ticket"/>
+    </field>
+    <field name="purchase_time" class="java.time.LocalDateTime">
+        <property name="com.jaspersoft.studio.field.name" value="purchase_time"/>
+        <property name="com.jaspersoft.studio.field.label" value="purchase_time"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="ticket"/>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="125" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="0" width="100" height="30" uuid="cec89eb9-6d5e-4989-acf9-9a824aab516a"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Arial" size="16"/>
+                </textElement>
+                <text><![CDATA[Ticket N.o:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="30" y="40" width="320" height="63" uuid="3fe819bb-22c3-4e17-a2a9-67eda56dbfda"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Comic Sans MS" size="26"/>
+                </textElement>
+                <text><![CDATA[HYPER BUS - BILL]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="100" y="0" width="90" height="30" uuid="1f693d0c-b07d-4d83-9169-bed0cc9bd78f"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Arial" size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{ticket_id}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="70" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="0" width="100" height="40" uuid="822793b7-7b3d-42c5-989f-48e3d4ec2398"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Customer name:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="180" y="3" width="90" height="35" uuid="4ae7ef30-8a5a-4408-a690-742ceb08e496"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Gender:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="100" y="0" width="70" height="35" uuid="66480391-e6c4-4783-990a-de6fe584bd5b"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="2" width="78" height="37" uuid="53a012ec-f5c7-45d3-899d-020ce466a211"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Arial" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="100" y="40" width="70" height="30" uuid="882e8aa0-2e2c-410b-8012-e6afbd3b350b"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="95" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="-20" width="150" height="40" uuid="3892d976-641f-40af-b1c5-0e197a50b765"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Phone number]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="180" y="12" width="90" height="40" uuid="bcd18d4b-61f3-426d-85a7-275d162d9585"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[License place:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="15" width="150" height="40" uuid="2f1d3efe-2b43-44bc-b9d4-8d53f2dea784"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Route:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="55" width="150" height="40" uuid="9c48620e-531b-41c6-8f19-1b48718fc3e9"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Bus name:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="100" y="15" width="70" height="35" uuid="4ed88f8b-c36c-4d28-a767-b30ad5c9ecd6"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{route_name}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="100" y="55" width="70" height="30" uuid="bed91f92-268c-4b19-abb8-decd7223dd5d"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{bus_name}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="10" width="80" height="40" uuid="e492cae3-32a4-4b6f-8456-42ae7b1d4d7f"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Arial" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{license_plate}]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="140" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="42" width="150" height="40" uuid="0914e76e-0eed-40c8-8d46-14b2c2bf8222"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Start_date:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="0" width="150" height="40" uuid="c942074c-3adb-4d7d-ba03-ef802cdaadd7"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Seat no:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="30" y="100" width="160" height="40" uuid="1fbda74a-b8d6-438f-b8ed-ec2ebe0ebd5e"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Price:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="180" y="-10" width="80" height="40" uuid="40b1f98b-237c-4d1e-810e-a5a6f173bb11"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Seat type:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="180" y="40" width="100" height="40" uuid="44916a8d-9e77-4aa1-93e6-3c25f04cbac3"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Purchase_date:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="100" y="0" width="70" height="40" uuid="3ae01aad-edc2-49ce-8b96-b50e0a70f186">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="121cdb0e-7a78-4b04-bacb-192b711dd269"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{seat_number}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="100" y="47" width="70" height="30" uuid="2b332f8a-8e0c-4869-874b-fc8de7a0a954">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b6facd6a-0b66-4077-b705-ec40b2e95ba4"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{start_date}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="-10" width="90" height="40" uuid="8f332d61-4745-4ae1-8484-87e1355c26f9">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e33461c2-91dc-4c4b-9386-5492e708dcf1"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{seat_type}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="44" width="90" height="30" uuid="e0aba1e3-facb-4e3d-af47-2aa8c0c30491">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e7ef5a98-6a7a-495f-b1a1-e1803ef7ff93"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{purchase_time}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="190" y="100" width="180" height="40" uuid="1bfcb920-6618-476c-b77c-c801394032d9">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aaaf1123-ee3e-48be-a70b-becc1f6467f5"/>
+                </reportElement>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName=".VnCooper" size="14" isItalic="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="59" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>
